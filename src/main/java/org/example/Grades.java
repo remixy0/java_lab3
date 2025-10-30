@@ -1,0 +1,48 @@
+package org.example;
+import java.util.Random;
+import de.vandermeer.asciitable.AsciiTable;
+
+
+public class Grades {
+    static int [][] grades = new int[5][4];
+    private static int bestStudentNumber;
+
+    public static void randomGrades(){
+        Random rand = new Random();
+        for(int i = 0; i < grades.length; i++){
+            for(int j = 0; j < grades[i].length; j++){
+                grades[i][j] = rand.nextInt(2,6);
+            }
+        }
+    }
+
+    public static void averageForStudent(){
+        randomGrades();
+        double avg = 0;
+        double bestStudentAvg= 0;
+        AsciiTable at = new AsciiTable();
+        at.addRule();
+        at.addRow("Student","Subject 1", "Subject 2","Subject 3","Subject 4","Average");
+        for(int i = 0; i < grades.length; i++) {
+            double sum = 0;
+            for (int j = 0; j < grades[i].length; j++) {
+                sum += grades[i][j];
+            }
+            avg = sum/grades.length;
+            if(avg>bestStudentAvg){
+                bestStudentAvg = avg;
+                bestStudentNumber = i+1;
+            }
+            at.addRule();
+            at.addRow(i+1,grades[i][0], grades[i][1], grades[i][2], grades[i][3], avg);
+        }
+        at.addRule();
+        String tabela = at.render();
+        System.out.println(tabela);
+    }
+
+
+
+
+}
+
