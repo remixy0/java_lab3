@@ -16,7 +16,7 @@ public class Grades {
         }
     }
 
-    public static void averageForStudent(){
+    public void averageForStudent(){
 
         double avg = 0;
 
@@ -37,7 +37,7 @@ public class Grades {
         System.out.println(tabela);
     }
 
-    public static void bestStudent(){
+    public void bestStudent(){
         double avg = 0;
         double bestStudentAvg= 0;
         int bestStudentNumber = 0;
