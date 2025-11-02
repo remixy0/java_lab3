@@ -51,7 +51,6 @@ public class TemperatureSensor {
                 }
             }
         }
-
         System.out.println("Highest temperature was measured on : "+godzina);
     }
 
