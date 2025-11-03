@@ -4,10 +4,10 @@ import de.vandermeer.asciitable.AsciiTable;
 
 
 public class Grades {
-    static int [][] grades = new int[5][4];
-    private static int bestStudentNumber;
+    int [][] grades = new int[5][4];
+    private int bestStudentNumber;
 
-    public static void randomGrades(){
+    public void randomGrades(){
         Random rand = new Random();
         for(int i = 0; i < grades.length; i++){
             for(int j = 0; j < grades[i].length; j++){
