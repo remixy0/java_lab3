@@ -38,6 +38,7 @@ public class Game {
         System.out.println("row column");
         String x = sc.nextLine();
         String[] parts = x.split("\\s+");
+        if(parts.length!=2){return false;}
         if(board[Integer.parseInt(parts[0])-1][Integer.parseInt(parts[1])-1].equals(" ")){
             board[Integer.parseInt(parts[0])-1][Integer.parseInt(parts[1])-1] = " X";
             return true;

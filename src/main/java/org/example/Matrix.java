@@ -49,10 +49,4 @@ public class Matrix {
         System.out.println("max = " + max);
 
     }
-
-
-
-
-
-
 }

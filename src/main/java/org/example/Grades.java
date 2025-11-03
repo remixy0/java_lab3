@@ -55,9 +55,5 @@ public class Grades {
         System.out.println("best student number: " + bestStudentNumber + " with average grade: " + bestStudentAvg );
 
     }
-
-
-
-
 }
 
