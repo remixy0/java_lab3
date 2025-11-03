@@ -17,7 +17,7 @@ public class Grades {
     }
 
     public void averageForStudent(){
-
+        int [] subject_sum = new int[4];
         double avg = 0;
 
         AsciiTable at = new AsciiTable();
@@ -27,11 +27,15 @@ public class Grades {
             double sum = 0;
             for (int j = 0; j < grades[i].length; j++) {
                 sum += grades[i][j];
+                subject_sum[j] += grades[i][j];
             }
             avg = sum/grades.length;
             at.addRule();
             at.addRow(i+1,grades[i][0], grades[i][1], grades[i][2], grades[i][3], avg);
+
         }
+        at.addRule();
+        at.addRow("Subject AVG",subject_sum[0]/5, subject_sum[1]/5, subject_sum[2]/5, subject_sum[3]/5, " ");
         at.addRule();
         String tabela = at.render();
         System.out.println(tabela);
@@ -55,5 +59,7 @@ public class Grades {
         System.out.println("best student number: " + bestStudentNumber + " with average grade: " + bestStudentAvg );
 
     }
+
+
 }
 

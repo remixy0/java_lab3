@@ -10,6 +10,7 @@ public class Main {
         Grades grades = new Grades();
         grades.randomGrades();
         grades.averageForStudent();
+
         Game gra = new Game();
         gra.startGame();
 
