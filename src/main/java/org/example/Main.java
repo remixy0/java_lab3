@@ -1,8 +1,5 @@
-import org.example.Game;
-import org.example.Grades;
-import org.example.Matrix;
-import org.example.Scores;
-import java.util.Random;
+import org.example.*;
+
 
 
 public class Main {

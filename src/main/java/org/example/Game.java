@@ -89,6 +89,10 @@ public class Game {
             System.out.println(checkDiagonal() +" Wins");
             return true;
         }
+        else if(checkDraw() != ""){
+            System.out.println("Draw");
+            return true;
+        }
         return false;
     }
 
@@ -118,6 +122,17 @@ public class Game {
             return board[0][2];
         }
         return "";
+    }
+
+    String checkDraw(){
+        for(int i=0;i<3;i++) {
+            for(int j=0;j<3;j++){
+                if(board[i][j] == " "){
+                    return "";
+                }
+            }
+        }
+        return "gramy";
     }
 
 
